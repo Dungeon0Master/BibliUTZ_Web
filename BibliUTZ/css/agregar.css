@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    color: #070042;
+    background-color: #E7FEFF; /* Cambia este valor al color que desees */
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/* Estilo del spinner */
+.spinner {
+    border: 8px solid #f3f3f300; /* Color de fondo del spinner */
+    border-top: 8px solid #3498db; /* Color del borde superior del spinner */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    height: 90px;
+    width: 100%;
+    background: #011E3F;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    animation: 0.5s entradalogo 1;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo-img {
+    height: 80px;
+    cursor: pointer;
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 110px;
+    margin-right: auto;
+    animation: 1s entradalogo 1;
+}
+
+#search-bar input[type="text"] {
+    padding: 8px;
+    margin-right: 5px;
+    border-radius: 20px;
+    background-color: #011E3F;
+    width: 400px;
+    height: 15px;
+    border: 2px solid white;
+    color: white;
+}
+
+#search-bar button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#search-bar button img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+#perfil {
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+    animation: 1.5s entradalogo 1;
+}
+
+#perfil-img {
+    height: 50px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+#perfil-img:hover {
+    filter: brightness(1.6);
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: calc(100%);
+    right: 150px;
+    overflow: hidden;
+    max-height: 0;
+}
+
+#dropdown-content.show {
+    display: block;
+    animation: accordionExpand 0.7s ease-out forwards;
+}
+
+#dropdown-content.hide {
+    animation: accordionCollapse 0.7s ease-out forwards;
+}
+
+#dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#dropdown-content img {
+    height: 20px;
+    margin-right: 8px;
+}
+
+#dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+#check {
+    display: none;
+}
+
+.mostrar-menu {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mostrar-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    #search-bar {
+        margin: 0;
+        width: 100%;
+        padding: 10px;
+        order: 2; /* Mueve la barra de búsqueda en dispositivos pequeños */
+    }
+
+    #search-bar input[type="text"] {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    #logo {
+        margin: 0;
+        order: 1; /* Mueve el logo antes de la barra de búsqueda */
+    }
+
+    #perfil {
+        display: none; /* Oculto por defecto */
+    }
+    
+    #check:checked ~ #perfil {
+        display: flex; /* Se muestra cuando se selecciona el checkbox del menú hamburguesa */
+    }
+
+    #dropdown-content {
+        top: 100%;
+        right: 0;
+        min-width: 100%; /* Ocupa todo el ancho del viewport */
+    }
+}
+
+@keyframes accordionExpand {
+    0% {
+        max-height: 0;
+        opacity: 1;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    100% {
+        max-height: 500px;
+        opacity: 1;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+@keyframes accordionCollapse {
+    0% {
+        max-height: 500px;
+        opacity: 1;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    100% {
+        max-height: 0;
+        opacity: 1;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+
+/* Contenedor del contenido principal */
+#main-content {
+    margin-top: 90px; /* Deja un espacio debajo del header */
+    height: calc(100vh - 90px); /* Ajusta la altura del contenedor principal */
+    overflow-y: scroll; /* Añade el scrollbar vertical */
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: #01203F; /* Color del título */
+    text-align: center;
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilo para el contenedor del formulario */
+#contenedor {
+    max-width: 800px; /* Reduce el ancho máximo del contenedor */
+    min-height: 700px;
+    background: #ffffff;
+    margin: 0 auto; 
+    border-radius: 20px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    position: relative; /* Asegura que z-index funcione */
+    z-index: 1; /* Valor más bajo para que esté debajo del menú */
+    padding: 20px; /* Añade un poco de espacio interior */
+}
+
+/* Estilo general para los párrafos del formulario */
+#libro-form p {
+    margin-bottom: 10px; /* Reduce el margen inferior para acercar los elementos */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: #01203F;
+}
+
+/* Estilo para los inputs del formulario */
+#libro-form input[type="text"],
+#libro-form input[type="number"],
+#libro-form input[type="date"],
+#libro-form input[type="file"] {
+    width: calc(100% - 22px); /* Ajusta el ancho para el padding y border */
+    padding: 8px; /* Reduce el padding dentro de los inputs */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    margin-top: 3px; /* Reduce el margen superior entre el label y el input */
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón de guardar libro */
+#libro-form button[type="button"] {
+    background-color: #007BFF; /* Azul del botón */
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px; /* Ajusta el padding para hacerlo más compacto */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px; /* Reduce el margen alrededor del botón */
+    transition: background-color 0.3s, transform 0.3s; /* Suaviza el cambio de color y de tamaño */
+}
+
+/* Hover específico para el botón de guardar libro */
+#libro-form button[type="button"]:first-of-type:hover {
+    background-color: #0056b3; /* Azul oscuro al pasar el ratón */
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+}
+
+/* Hover específico para el botón de volver */
+#libro-form button#back-button:hover {
+    background-color: #0056b3; /* Gris oscuro al pasar el ratón */
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+}
+
+/* Estilo para la vista previa de la portada */
+#portada-preview {
+    display: block;
+    margin: 20px 0; /* Espacio superior e inferior */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+footer {
+    width: 100%;
+    background: #011E3F;
+    color: #fff;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 10;
+    
+    /* Flexbox settings */
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flex a columna */
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+    text-align: center;
+}
+footer a {
+    color: #fff; /* Cambia el color del texto a blanco */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Opcional: añade subrayado al pasar el mouse, si lo deseas */
+}
+
+
+
+#sp {
+    height: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-right: 8px; /* Añade un margen a la derecha de la imagen */
+    vertical-align: middle; /* Alinea verticalmente la imagen al medio */
+}
+
+
+@keyframes entradalogo {
+    0% {
+        transform: translateY(-200px);
+    }
+}

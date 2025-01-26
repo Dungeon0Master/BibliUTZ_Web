@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    color: #d1eef0;
+    background-color: #E7FEFF; /* Cambia este valor al color que desees */
+}
+
+
+header {
+    height: 90px;
+    width: 100%; /* Asegura que el header ocupe todo el ancho de la ventana */
+    background: #011E3F;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    animation: 0.5s entradalogo 1;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Centra el contenedor del logo */
+    transform: translateX(-60px); /* Mueve el logo 20px a la izquierda */
+}
+
+#logo-img {
+    height: 80px; /* Ajusta el tamaño de la imagen según sea necesario */
+    cursor: pointer; /* Para indicar que la imagen es interactiva */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+
+
+#contenedor {
+    min-width: 30%; /* Aumenta el ancho máximo para extender el contenedor */
+    min-height: 90%; /* Aumenta la altura mínima para extender el contenedor */
+    background: #ffffff;
+    margin: 1px auto 0; /* Añadir margen superior */
+    border-radius: 20px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    position: relative; /* Asegura que z-index funcione */
+    z-index: 1; /* Valor más bajo para que esté debajo del menú */
+}
+
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; /* Asegúrate de que ocupe el 100% del ancho disponible */
+    max-width: 100%;
+    text-align: center;
+}
+
+.login-form {
+    padding: 30px;
+    color: #000000; /* Establece el color de texto por defecto en negro */
+    text-align: center; /* Centra el contenido dentro del formulario */
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+.login-form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #1E98D7;
+    border-radius: 20px;
+}
+
+.login-form .register-link {
+    display: block;
+    margin-bottom: 20px;
+    color: #1E98D7;
+    text-decoration: none;
+}
+
+.login-form button {
+    background-color: #1E98D7;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.login-form button:hover {
+    background-color: #2a79a0;
+}
+
+
+footer {
+    height: 40px;
+    width: 100%;
+    background: #011E3F;
+    color: #fff;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    position: relative; /* Asegura que z-index funcione */
+    z-index: 10; /* Valor más alto para que esté por encima del contenedor */
+
+    display: flex; /* Usa flexbox para alinear los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 30px; /* Ajusta el padding según sea necesario */
+}
+
+footer a {
+    display: flex; /* Usa flexbox en el enlace también */
+    align-items: center; /* Centra verticalmente los elementos dentro del enlace */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Mantiene el color del texto heredado */
+}
+
+#sp {
+    height: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-right: 8px; /* Añade un margen a la derecha de la imagen */
+    vertical-align: middle; /* Alinea verticalmente la imagen al medio */
+}

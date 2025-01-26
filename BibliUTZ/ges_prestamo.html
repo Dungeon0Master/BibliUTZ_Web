@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../BibliUTZ/css/ges_prestamo.css"> 
+    <title>Gestión de Préstamos - BibliUTZ</title>
+    <link rel="icon" href="../BibliUTZ/img/minilogo2.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <section id="logo">
+            <a href="../BibliUTZ/admindex.html"><img id="logo-img" src="../BibliUTZ/img/logo animado bibliutz.gif" alt=""></a>
+        </section>
+    
+        <div id="search-bar">
+            <form id="search-form" action="../BibliUTZ/carousel-res-admin.html" method="get">
+                <input type="text" name="query" placeholder="¿Qué vamos a buscar hoy?">
+                <button type="submit"><img src="../BibliUTZ/img/lupa.png" alt="Buscar"></button>
+            </form>
+        </div>
+
+        <section id="perfil">
+            <img id="perfil-img" src="../BibliUTZ/img/perfil-bonito.png" alt="Perfil">
+            <div id="dropdown-content" class="dropdown-content">
+                <!-- Contenido del dropdown -->
+                <a href="admindex.html"><img id="inicio" src="../BibliUTZ/img/casa-icono-silueta.png" alt="">Inicio</a>
+                <a href="administradores.html"><img id="editarp" src="../BibliUTZ/img/editar.png" alt="">Administradores</a>
+                <a href="alumnos.html"><img id="editarp" src="../BibliUTZ/img/editar.png" alt="">Alumnos</a>
+                <a href="help.html"><img id="info" src="../BibliUTZ/img/boton-de-informacion.png" alt="">Ayuda</a>
+                <a href="index.html"><img id="cerrars" src="../BibliUTZ/img/cerrar-sesion.png" alt="">Cerrar sesión</a>
+            </div>
+        </section>
+    </header>
+
+    <section id="main-content">
+        
+        <section id="contenedor">
+            <h1>Gestión de Préstamos</h1>
+            <h2>Detalles del Préstamo</h2>
+            <table id="tabla-prestamos">
+                <thead>
+                    <tr>
+                        <th>ID Préstamo</th>
+                        <th>Matrícula Alumno</th>
+                        <th>Nombre Alumno</th>
+                        <th>Fecha de Inicio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se llenará la tabla con los detalles del préstamo -->
+                </tbody>
+            </table>
+        </section>
+
+        <footer> 
+            <a href="#"><img id="sp" src="../BibliUTZ/img/ScriptSolutions logo.png" alt="">Desarrollado por Script Solutions</a>
+        </footer>
+    </section>
+
+    <script src="../BibliUTZ/js/gesprestamo.js"></script>
+</body>
+</html>

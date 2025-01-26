@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../BibliUTZ/css/administradores.css"> 
+    <title>Gestión de Administradores</title>
+    <link rel="icon" href="../BibliUTZ/img/minilogo2.png" type="image/x-icon">
+</head>
+<body>
+    
+    <header>
+        <section id="logo">
+            <a href="../BibliUTZ/admindex.html"><img id="logo-img" src="../BibliUTZ/img/logo animado bibliutz.gif" alt=""></a>
+        </section>
+    
+        <!-- Agrega el buscador aquí -->
+        <div id="search-bar">
+            <form id="search-form" action="../BibliUTZ/carousel-res-admin.html" method="get">
+                <input type="text" name="query" placeholder="¿Qué vamos a buscar hoy?">
+                <button type="submit"><img src="../BibliUTZ/img/lupa.png" alt="Buscar"></button>
+            </form>
+        </div>
+        <!-- Fin del buscador -->
+    
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu"> &#8801 </label>
+
+        <section id="perfil">
+            <img id="perfil-img" src="../BibliUTZ/img/perfil-bonito.png" alt="Perfil">
+            <div id="dropdown-content" class="dropdown-content">
+                <!-- Contenido del dropdown -->
+                <a href="admindex.html"><img id="inicio" src="../BibliUTZ/img/casa-icono-silueta.png" alt="">Inicio</a>
+                <a href="administradores.html"><img id="editarp" src="../BibliUTZ/img/editar.png" alt="">Administradores</a>
+                <a href="alumnos.html"><img id="editarp" src="../BibliUTZ/img/editar.png" alt="">Alumnos</a>
+                <a href="help.html"><img id="info" src="../BibliUTZ/img/boton-de-informacion.png" alt="">Ayuda</a>
+                <a href="index.html"><img id="cerrars" src="../BibliUTZ/img/cerrar-sesion.png" alt="">Cerrar sesión</a>
+            </div>
+        </section>
+        
+        
+    </header>
+
+    <section id="main-content">
+        <button id="agregar-admin" onclick="window.location='register.html'">Agregar Administrador</button>
+        <section id="contenedor">
+            <h1>Gestión de Administradores</h1>
+        
+            <!-- Nueva sección para mostrar el administrador en línea -->
+            <section id="administrador-en-linea">
+                <!-- Aquí se mostrará el administrador en línea -->
+            </section>
+        
+            <!-- Aquí se actualizará el contenido de la tabla de administradores -->
+            <div id="tabla-administradores">
+                <!-- La tabla se generará dinámicamente aquí -->
+            </div>
+        
+            
+        </section>
+        
+    <footer> 
+        <a href="#"><img id="sp" src="../BibliUTZ/img/ScriptSolutions logo.png" alt="">Desarrollado por Script Solutions</a>
+    </footer>
+
+    </section>
+   
+    
+
+    <script src="../BibliUTZ/js/admins.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../BibliUTZ/css/estilos.css">
+    <title>BibliUTZ</title>
+    <link rel="icon" href="../BibliUTZ/img/minilogo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="spinner-overlay">
+        <div class="spinner"></div>
+    </div>
+
+
+
+    <header>
+        <section id="logo">
+            <a href="../BibliUTZ/admindex.html"><img id="logo-img" src="../BibliUTZ/img/logo animado bibliutz.gif" alt=""></a>
+        </section>
+    
+        <!-- Agrega el buscador aquí -->
+        <div id="search-bar">
+            <form id="search-form" action="../BibliUTZ/carousel-res-admin.html" method="get">
+                <input type="text" name="query" placeholder="¿Qué vamos a buscar hoy?">
+                <button type="submit"><img src="../BibliUTZ/img/lupa.png" alt="Buscar"></button>
+            </form>
+        </div>
+        <!-- Fin del buscador -->
+    
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu"> &#8801 </label>
+
+        <section id="perfil">
+            <img id="perfil-img" src="../BibliUTZ/img/perfil-bonito.png" alt="Perfil">
+            <div id="dropdown-content" class="dropdown-content">
+                <!-- Contenido del dropdown -->
+                <a href="admindex.html"><img id="inicio" src="../BibliUTZ/img/casa-icono-silueta.png" alt="">Inicio</a>
+                <a href="administradores.html"><img id="editarp" src="../BibliUTZ/img/editar.png" alt="">Administradores</a>
+                <a href="alumnos.html"><img id="editarp" src="../BibliUTZ/img/editar.png" alt="">Alumnos</a>
+                <a href="help.html"><img id="info" src="../BibliUTZ/img/boton-de-informacion.png" alt="">Ayuda</a>
+                <a href="index.html"><img id="cerrars" src="../BibliUTZ/img/cerrar-sesion.png" alt="">Cerrar sesión</a>
+            </div>
+        </section>
+        
+        
+    </header>
+
+<section id="main-content">
+    <nav id="menu2"> 
+        <ul>
+            <li><a href="pedido.html">Realizar préstamo</a></li>
+            <li><a href="ges_prestamo.html">Gestionar préstamo</a></li>
+            <li><a href="geslibro.html">Gestionar libros</a></li>
+        </ul>
+    </nav>
+
+
+
+    <section id="contenedor">
+        <div class="carousel-container">
+            <div class="carousel">
+              <a href="../BibliUTZ/carousel-res-admin.html?category=Literatura" class="carousel-item"><img src="./img/literatura.jpg" alt="Literatura"><div class="carousel-text">Literatura</div></a>
+              <a href="../BibliUTZ/carousel-res-admin.html?category=Programacion" class="carousel-item"><img src="./img/programacion.jpg" alt="Programacion"><div class="carousel-text">Programación</div></a>
+              <a href="../BibliUTZ/carousel-res-admin.html?category=matematicas" class="carousel-item"><img src="./img/matematicas.jpg" alt="Matematicas"><div class="carousel-text">Matemáticas</div></a>
+              <a href="../BibliUTZ/carousel-res-admin.html?category=Filosofia" class="carousel-item"><img src="./img/filosofia.webp" alt="Filosofia"><div class="carousel-text">Filosofía</div></a>
+              <a href="../BibliUTZ/carousel-res-admin.html?category=Ciencias Ambientales" class="carousel-item"><img src="./img/ciencias ambientales.jpg" alt="Literatura"><div class="carousel-text">Ciencias ambientales</div></a>
+              <a href="../BibliUTZ/carousel-res-admin.html?category=ciencias-fisicas" class="carousel-item"><img src="./img/ciencias fisicas.jpg" alt="Literatura"><div class="carousel-text">Ciencias físicas</div></a>
+              <a href="../BibliUTZ/carousel-res-admin.html?category=ingenieria" class="carousel-item"><img src="./img/mecatronica.jpg" alt="Literatura"><div class="carousel-text">Ingenieria</div></a>
+              <a href="../BibliUTZ/carousel-res-admin.html?category=terapias" class="carousel-item"><img src="./img/terapias.png" alt="Literatura"><div class="carousel-text">Terapias</div></a>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+          </div>  
+
+          
+          
+        <div class="cat-pop-container">
+            <h2><img id="marcador" src="../BibliUTZ/img/marcador.png" alt="">¿Qué administraremos hoy?</h2>
+            <h2><img id="librovision" src="../BibliUTZ/img/librovision.png" alt=""></h2>
+        </div>
+
+        <div class="catalogo-container">
+
+        </div>
+
+        <div class="paginacion">
+
+        </div>
+    </section>
+
+
+
+    <footer> 
+        <p><a href="#"><img id="sp" src="../BibliUTZ/img/ScriptSolutions logo.png" alt="">Desarrollado por &copy;Script Solutions 2024</a></p>
+    </footer>
+
+</section>
+
+  <script src="/BibliUTZ/js/script.js"></script>
+</body>
+</html>

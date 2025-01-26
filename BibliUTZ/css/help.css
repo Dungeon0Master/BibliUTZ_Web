@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    color: #d1eef0;
+    background-color: #E7FEFF; /* Cambia este valor al color que desees */
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/* Estilo del spinner */
+.spinner {
+    border: 8px solid #f3f3f300; /* Color de fondo del spinner */
+    border-top: 8px solid #3498db; /* Color del borde superior del spinner */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    height: 90px;
+    width: 100%;
+    background: #011E3F;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    animation: 0.5s entradalogo 1;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo-img {
+    height: 80px;
+    cursor: pointer;
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 110px;
+    margin-right: auto;
+    animation: 1s entradalogo 1;
+}
+
+#search-bar input[type="text"] {
+    padding: 8px;
+    margin-right: 5px;
+    border-radius: 20px;
+    background-color: #011E3F;
+    width: 400px;
+    height: 15px;
+    border: 2px solid white;
+    color: white;
+}
+
+#search-bar button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#search-bar button img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+#perfil {
+    display: flex;
+    align-items: center;
+    margin-right: 200px;
+    animation: 1.5s entradalogo 1;
+}
+
+#perfil-img {
+    height: 50px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+#perfil-img:hover {
+    filter: brightness(1.6);
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: calc(100%);
+    right: 150px;
+    overflow: hidden;
+    max-height: 0;
+}
+
+#dropdown-content.show {
+    display: block;
+    animation: accordionExpand 0.7s ease-out forwards;
+}
+
+#dropdown-content.hide {
+    animation: accordionCollapse 0.7s ease-out forwards;
+}
+
+#dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#dropdown-content img {
+    height: 20px;
+    margin-right: 8px;
+}
+
+#dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+#check {
+    display: none;
+}
+
+.mostrar-menu {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mostrar-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    #search-bar {
+        margin: 0;
+        width: 100%;
+        padding: 10px;
+        order: 2; /* Mueve la barra de búsqueda en dispositivos pequeños */
+    }
+
+    #search-bar input[type="text"] {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    #logo {
+        margin: 0;
+        order: 1; /* Mueve el logo antes de la barra de búsqueda */
+    }
+
+    #perfil {
+        display: none; /* Oculto por defecto */
+    }
+    
+    #check:checked ~ #perfil {
+        display: flex; /* Se muestra cuando se selecciona el checkbox del menú hamburguesa */
+    }
+
+    #dropdown-content {
+        top: 100%;
+        right: 0;
+        min-width: 100%; /* Ocupa todo el ancho del viewport */
+    }
+}
+
+@keyframes accordionExpand {
+    0% {
+        max-height: 0;
+        opacity: 1;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    100% {
+        max-height: 500px;
+        opacity: 1;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+@keyframes accordionCollapse {
+    0% {
+        max-height: 500px;
+        opacity: 1;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    100% {
+        max-height: 0;
+        opacity: 1;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+#contenedor {
+    margin-top: 90px; /* Deja un espacio debajo del header */
+    height: calc(100vh - 90px); /* Ajusta la altura del contenedor principal */
+    overflow-y: scroll; /* Añade el scrollbar vertical */
+}
+
+
+
+footer {
+    
+    height: 40px;
+    width: 100%;
+    background: #011E3F;
+    color: #fff;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    position: relative; /* Asegura que z-index funcione */
+    z-index: 10; /* Valor más alto para que esté por encima del contenedor */
+
+    display: flex; /* Usa flexbox para alinear los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 30px; /* Ajusta el padding según sea necesario */
+}
+
+footer a {
+    display: flex; /* Usa flexbox en el enlace también */
+    align-items: center; /* Centra verticalmente los elementos dentro del enlace */
+    text-decoration: none; /* Elimina la subrayado de los enlaces */
+    color: inherit; /* Mantiene el color del texto heredado */
+}
+
+#sp {
+    height: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-right: 8px; /* Añade un margen a la derecha de la imagen */
+    vertical-align: middle; /* Alinea verticalmente la imagen al medio */
+}
+
+@keyframes entradalogo {
+    0% {
+        transform: translateY(-200px);
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Libro</title>
+    <script src="js/agregar.js" defer></script> <!-- Cargar el archivo JavaScript -->
+</head>
+<body>
+    <h1>Agregar Nuevo Libro</h1>
+    
+    <form id="libro-form" enctype="multipart/form-data">
+        <p><strong>Título:</strong> <input type="text" id="titulo" required></p>
+        <p><strong>Autor:</strong> <input type="text" id="autor" required></p>
+        <p><strong>Editorial:</strong> <input type="text" id="editorial" required></p>
+        <p><strong>Fecha de Publicación:</strong> <input type="date" id="fecha_publicacion" required></p>
+        <p><strong>ISBN:</strong> <input type="text" id="isbn" required></p>
+        <p><strong>Número de Páginas:</strong> <input type="number" id="num_paginas" required></p>
+        <p><strong>Ejemplares:</strong> <input type="number" id="ejemplares" required></p>
+        <p><strong>Clasificación:</strong> <input type="text" id="clasificacion" required></p>
+        <p><strong>Catalogación Dewey:</strong> <input type="text" id="catalogacion_dewin" required></p>
+        <p><strong>Catalogación Congreso:</strong> <input type="text" id="catalogacion_congreso" required></p>
+        <p><strong>Estatus:</strong> <input type="text" id="estatus" required></p>
+        <p><strong>Código de Barra:</strong> <input type="text" id="codigo_barra" required></p>
+        <p><strong>Duración del Préstamo (días):</strong> <input type="number" id="duracion_prestamo" required></p>
+
+        <p><strong>Portada:</strong> <input type="file" id="portada-input" accept="image/*"></p>
+        <img id="portada-preview" src="" alt="Portada seleccionada" style="display:none; max-width: 200px;">
+        
+        <button type="button" onclick="guardarLibro()">Guardar Libro</button>
+        <button type="button" id="back-button">Volver</button>
+    </form>
+</body>
+</html>

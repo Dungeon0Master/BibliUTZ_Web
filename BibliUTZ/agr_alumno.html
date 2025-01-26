@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Alumno</title>
+    <link rel="stylesheet" href=""> <!-- Puedes agregar un archivo CSS si lo deseas -->
+    <script src="js/agr_alumno.js" defer></script>
+    <script>
+        function cerrarVentana() {
+            window.history.back();
+            window.close(); // Cierra la ventana actual
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Registrar Alumno</h1>
+        <form id="alumnoForm">
+            <br><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <br>
+            <label for="segundoNombre">Segundo Nombre (Si aplica):</label>
+            <input type="text" id="segundoNombre">
+            <br>
+            <label for="apellidoPaterno">Apellido Paterno:</label>
+            <input type="text" id="apellidoPaterno" required>
+            <br>
+            <label for="apellidoMaterno">Apellido Materno:</label>
+            <input type="text" id="apellidoMaterno" required>
+            <br>
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" required>
+            <br>
+            <label for="correo">Correo:</label>
+            <input type="text" id="correo" name="correo" required>
+            <label for="correo2">@utzmg.edu.mx</label>
+            <br>
+            <label for="carrera">Carrera:</label>
+            <select id="carrera">
+                <option value="Lic. en Innovación de Negocios">Lic. en Innovación de Negocios</option>
+                <option value="Ing. en Energías Renovables">Ing. en Energías Renovables</option>
+                <option value="Ing. en Mecatrónica">Ing. en Mecatrónica</option>
+                <option value="Ing. en Desarrollo y Gestión de Software">Ing. en Desarrollo y Gestión de Software</option>
+                <option value="Lic. en Gestión y Desarrollo Turístico">Lic. en Gestión y Desarrollo Turístico</option>
+                <option value="Lic. Protección Civil y Emergencias">Lic. Protección Civil y Emergencias</option>
+            </select>
+            <br>
+            <label for="grupo">Grupo:</label>
+            <select id="grupo">
+                <option value="1A">1A</option>
+                <option value="1B">1B</option>
+                <option value="2A">2A</option>
+                <option value="2B">2B</option>
+                <option value="3A">3A</option>
+                <option value="3B">3B</option>
+                <option value="4A">4A</option>
+                <option value="4B">4B</option>
+                <option value="5A">5A</option>
+                <option value="5B">5B</option>
+                <option value="6A">6A</option>
+                <option value="6B">6B</option>
+                <option value="7A">7A</option>
+                <option value="7B">7B</option>
+                <option value="8A">8A</option>
+                <option value="8B">8B</option>
+                <option value="9A">9A</option>
+                <option value="9B">9B</option>
+                <option value="10A">10A</option>
+                <option value="10B">10B</option>
+            </select>
+            <br>
+            <button type="submit">Registrar Alumno</button>
+            <button type="button" onclick="cerrarVentana()">Cerrar</button>
+        </form>
+        <div id="mensaje"></div>
+    </div>
+</body>
+</html>

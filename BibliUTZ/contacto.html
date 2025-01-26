@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../BibliUTZ/css/carousel-res.css">
+    <title>Contacto - BibliUTZ</title>
+    <link rel="icon" href="../BibliUTZ/img/minilogo2.png" type="image/x-icon">
+
+    <style>
+        #main-content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #main-content h1 {
+            color: #004080;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #main-content p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        #main-content form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main-content form label {
+            margin: 10px 0 5px;
+        }
+
+        #main-content form input, #main-content form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        #main-content form button {
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #main-content form button:hover {
+            background-color: #003366;
+        }
+
+        .back-to-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-to-home a {
+            color: #004080;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-to-home a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Aquí va el contenido del header, igual que en tu página actual -->
+    </header>
+
+    <section id="main-content">
+        <h1>Contacto</h1>
+        <p>Si tienes alguna duda o necesitas asistencia, por favor llena el siguiente formulario y nos pondremos en contacto contigo lo más pronto posible.</p>
+
+        <form action="enviar_contacto.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="back-to-home">
+            <a href="../BibliUTZ/index.html">Regresar al menú principal</a>
+        </div>
+    </section>
+
+    <footer> 
+        <a href="#"><img id="sp" src="../BibliUTZ/img/ScriptSolutions logo.png" alt="">Desarrollado por Script Solutions</a>
+    </footer>
+</body>
+</html>

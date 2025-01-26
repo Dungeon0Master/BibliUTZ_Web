@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../BibliUTZ/css/libroinfo.css">
+    <title>BibliUTZ</title>
+    <link rel="icon" href="../BibliUTZ/img/minilogo2.png" type="image/x-icon">
+</head>
+<body>
+
+<header>
+    <section id="logo">
+        <a href="../BibliUTZ/index.html"><img id="logo-img" src="../BibliUTZ/img/logo animado bibliutz.gif" alt=""></a>
+    </section>
+
+    <div id="search-bar">
+        <form id="search-form" action="../BibliUTZ/carousel-res.html" method="get">
+            <input type="text" name="query" placeholder="¿Qué vamos a buscar hoy?">
+            <button type="submit"><img src="../BibliUTZ/img/lupa.png" alt="Buscar"></button>
+        </form>
+    </div>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="mostrar-menu"> &#8801 </label>
+
+    <section id="perfil">
+        <img id="perfil-img" src="../BibliUTZ/img/perfil-bonito.png" alt="Perfil">
+        <div id="dropdown-content" class="dropdown-content">
+            <!-- Contenido del dropdown -->
+            <a href="index.html"><img id="inicio" src="../BibliUTZ/img/casa-icono-silueta.png" alt="">Inicio</a>
+            <a href="../BibliUTZ/login.html"><img id="editarp" src="../BibliUTZ/img/editar.png" alt="">Iniciar sesión</a>
+            <a href="helpestudiante.html"><img id="info" src="../BibliUTZ/img/boton-de-informacion.png" alt="">Ayuda</a>
+        </div>
+    </section>
+</header>
+
+<section id="main-content">
+    <section id="contenedor">
+        <div class="container">
+            <div class="text-info">
+                <h2>Información del Libro</h2>
+                <p><strong>Título:</strong> <span id="titulo"></span></p>
+                <p><strong>Autor:</strong> <span id="autor"></span></p>
+                <p><strong>Editorial:</strong> <span id="editorial"></span></p>
+                <p><strong>Fecha de publicación:</strong> <span id="fecha_publicacion"></span></p>
+                <p><strong>ISBN:</strong> <span id="isbn"></span></p>
+                <p><strong>Número de páginas:</strong> <span id="num_paginas"></span></p>
+                <p><strong>Ejemplares:</strong> <span id="ejemplares"></span></p>
+                <p><strong>Estatus:</strong> <span id="estatus"></span></p>
+                <p><strong>Código de barra:</strong> <span id="codigo_barra"></span></p>
+                <button id="back-button">Regresar</button>
+            </div>
+            <div class="cover-image">
+                <h2>Portada</h2>
+                <img id="portada" src="" alt="Portada del libro">
+            </div>
+        </div>
+    </section>
+
+    <footer> 
+        <a href="#"><img id="sp" src="../BibliUTZ/img/ScriptSolutions logo.png" alt="">Desarrollado por Script Solutions</a>
+    </footer>
+</section>
+
+<script src="../BibliUTZ/js/infolibro2.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../BibliUTZ/css/help.css">
+    <title>Ayuda - BibliUTZ</title>
+    <link rel="icon" href="../BibliUTZ/img/minilogo2.png" type="image/x-icon">
+
+    <style>
+        #main-content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #main-content h1 {
+            color: #004080;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #main-content p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        #main-content h2 {
+            color: #004080;
+            margin-top: 30px;
+        }
+
+        #main-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #main-content ul li {
+            padding: 10px 0;
+        }
+
+        #main-content ul li a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        #main-content ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .accordion {
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .accordion-button {
+            background-color: #004080;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .accordion-content {
+            padding: 10px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        .accordion-button.active {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section id="logo">
+            <a href="../BibliUTZ/admindex.html"><img id="logo-img" src="../BibliUTZ/img/logo animado bibliutz.gif" alt="Logo"></a>
+        </section>
+
+        <div id="search-bar">
+            <form id="search-form" action="../BibliUTZ/carousel-res.html" method="get">
+                <input type="text" name="query" id="search-query" placeholder="¿Qué vamos a buscar hoy?">
+                <button type="submit"><img src="../BibliUTZ/img/lupa.png" alt="Buscar"></button>
+            </form>
+        </div>
+
+        <section id="perfil">
+            <img id="perfil-img" src="../BibliUTZ/img/perfil-bonito.png" alt="Perfil">
+            <div id="dropdown-content" class="dropdown-content">
+                <!-- Contenido del dropdown -->
+                <a href="admindex.html"><img id="inicio" src="../BibliUTZ/img/casa-icono-silueta.png" alt="">Inicio</a>
+                <a href="administradores.html"><img id="editarp" src="../BibliUTZ/img/editar.png" alt="">Administradores</a>
+                <a href="alumnos.html"><img id="editarp" src="../BibliUTZ/img/editar.png" alt="">Alumnos</a>
+                <a href="help.html"><img id="info" src="../BibliUTZ/img/boton-de-informacion.png" alt="">Ayuda</a>
+                <a href="index.html"><img id="cerrars" src="../BibliUTZ/img/cerrar-sesion.png" alt="">Cerrar sesión</a>
+            </div>
+        </section>
+    </header>
+
+    <section id="main-content">
+        <h1>Centro de Ayuda</h1>
+        <p>Bienvenido al centro de ayuda de BibliUTZ. Aquí encontrarás respuestas a tus preguntas frecuentes.</p>
+        
+        <h2>Iniciar Sesión</h2>
+        <p>Para iniciar sesión, ingresa tu matrícula (números) y tu contraseña en los campos correspondientes. Si has olvidado tu contraseña, puedes <a href="recuperar_contraseña.html">recuperarla aquí</a>.</p>
+
+        <h2>Preguntas Frecuentes (FAQ)</h2>
+        <ul>
+            
+            <li><a href="#historial-prestamos">¿Cómo ver mi historial de préstamos?</a></li>
+            <li><a href="#renovar-libros">¿Cómo renovar o devolver libros?</a></li>
+        </ul>
+
+        <h2>Guías Rápidas</h2>
+        <p>Consulta nuestras guías paso a paso para aprender a utilizar las funciones de la biblioteca:</p>
+        <ul>
+            <li><a href="#guia-buscar-libros">Guía para buscar libros</a></li>
+            <li><a href="#guia-historial">Guía para ver el historial de préstamos</a></li>
+        </ul>
+
+        <h2 id="buscar-libros">¿Cómo buscar libros en la biblioteca?</h2>
+        <p>Para buscar libros en la biblioteca, puedes utilizar los siguientes métodos:</p>
+
+        <div class="accordion">
+            <button class="accordion-button">Palabras Clave</button>
+            <div class="accordion-content">
+                <p>Puedes buscar libros mediante palabras clave relacionadas con el título, autor o tema del libro. Simplemente ingresa las palabras clave en el campo de búsqueda y el sistema mostrará los resultados correspondientes.</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <button class="accordion-button">ISBN</button>
+            <div class="accordion-content">
+                <p>Si tienes el número ISBN del libro, puedes ingresarlo en el campo de búsqueda para localizar el libro específico de manera rápida. Este método es muy preciso.</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <button class="accordion-button">Nombre del Libro</button>
+            <div class="accordion-content">
+                <p>Ingresa el nombre completo o parcial del libro en el campo de búsqueda. Esto te permitirá encontrar libros que coincidan con el título que has proporcionado.</p>
+            </div>
+        </div>
+
+        <h2>Soporte Técnico</h2>
+        <p>Si tienes algún problema técnico, no dudes en <a href="contacto.html">contactar al soporte técnico</a> o enviarnos un mensaje a través del formulario.</p>
+
+        <h2>Políticas de la Biblioteca</h2>
+        <p>Consulta nuestras <a href="politicas.html">políticas</a> sobre préstamos, multas por retraso, y otros procedimientos importantes.</p>
+    </section>
+
+    <footer> 
+        <a href="#"><img id="sp" src="../BibliUTZ/img/ScriptSolutions logo.png" alt="">Desarrollado por Script Solutions</a>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const content = button.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+    </script>
+    <script src="/BibliUTZ/js/carousel-res.js"></script>
+</body>
+</html>

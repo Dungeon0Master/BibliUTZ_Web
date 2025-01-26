@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    color: #d1eef0;
+    background-color: #E7FEFF; /* Cambia este valor al color que desees */
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/* Estilo del spinner */
+.spinner {
+    border: 8px solid #f3f3f300; /* Color de fondo del spinner */
+    border-top: 8px solid #3498db; /* Color del borde superior del spinner */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+header {
+    height: 90px;
+    width: 100%;
+    background: #011E3F;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Cambia a 'center' para centrar horizontalmente */
+    align-items: center;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    animation: 0.5s entradalogo 1;
+    position: fixed; /* Fija el header en la parte superior */
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Asegura que el logo esté centrado */
+}
+
+#logo-img {
+    height: 80px;
+    cursor: pointer;
+}
+
+.logo {
+    filter: drop-shadow(1px 1px 20px yellow);
+}
+#main-content {
+    margin-top: 90px; /* Deja un espacio debajo del header */
+    height: calc(100vh - 90px); /* Ajusta la altura del contenedor principal */
+    overflow-y: scroll; /* Añade el scrollbar vertical */
+}
+
+
+/* Estilos generales del contenedor */
+.container {
+    
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el título */
+.container h1 {
+    text-align: center;
+    color: #01203F;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las etiquetas */
+.container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #01203F;
+    font-weight: bold;
+}
+
+/* Estilo para los campos de entrada de texto */
+.container input[type="text"],
+.container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Estilo para el campo de correo que va junto al sufijo */
+.container input[name="correo"] {
+    width: 60%;
+    display: inline-block;
+}
+
+.container label[for="correo2"] {
+    width: 18%;
+    display: inline-block;
+    padding-left: 10px;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+/* Efecto de enfoque para campos de entrada */
+.container input[type="text"]:focus,
+.container select:focus {
+    border-color: #01203F;
+    outline: none;
+}
+
+/* Estilo para los botones */
+.container button {
+    background-color: #01203F;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para los botones */
+.container button:hover {
+    background-color: #014F86;
+}
+
+/* Estilo para el mensaje de feedback */
+#mensaje {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #01203F;
+    text-align: center;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../BibliUTZ/css/login.css">
+    <title>BibliUTZ</title>
+    <link rel="icon" href="../BibliUTZ/img/minilogo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <section id="logo">
+            <a href="index.html"><img id="logo-img" src="../BibliUTZ/img/logo animado bibliutz.gif" alt=""></a>
+        </section>
+    </header>
+    <div class="wrapper">
+        <div class="content">
+            <section id="contenedor">
+                <div class="login-form">
+                    <h2>Inicio de sesión </h2>
+                    <!-- Enviar los datos a login.php mediante POST -->
+                    <form action="login.php" method="post">
+                        <label for="username">Matricula:</label>
+                        <input type="text" id="username" name="username" required>
+                    
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required>
+                    
+                        <a href="index.html" class="register-link">¿No eres administrador? Regresa aquí</a>
+                        <button type="submit">Iniciar sesión</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    
+        <footer> 
+            <a href="#"><img id="sp" src="../BibliUTZ/img/ScriptSolutions logo.png" alt="">Desarrollado por Script Solutions</a>
+        </footer>
+    </div>
+
+    
+</body>
+</html>

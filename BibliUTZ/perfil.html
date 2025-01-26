@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - BibliUTZ</title>
+    <link rel="icon" href="../BibliUTZ/img/minilogo2.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../BibliUTZ/css/perfil.css">
+</head>
+<body>
+    <div class="spinner-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <section id="logo">
+            <a href="../BibliUTZ/index.html"><img id="logo-img" src="../BibliUTZ/img/logo animado bibliutz.gif" alt="Logo"></a>
+        </section>
+
+        <div id="search-bar">
+            <form id="search-form" action="../BibliUTZ/carousel-res.html" method="get">
+                <input type="text" name="query" id="search-query" placeholder="¿Qué vamos a buscar hoy?">
+                <button type="submit"><img src="../BibliUTZ/img/lupa.png" alt="Buscar"></button>
+            </form>
+        </div>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu"> &#8801 </label>
+
+        <section id="perfil">
+            <img id="perfil-img" src="../BibliUTZ/img/perfil-bonito.png" alt="Perfil">
+            <div id="dropdown-content" class="dropdown-content">
+                <a href="../BibliUTZ/index.html"><img id="inicio" src="../BibliUTZ/img/casa-icono-silueta.png" alt="">Inicio</a>
+                <a href="perfil.html"><img id="editarp" src="../BibliUTZ/img/editar.png" alt="">Perfil</a>
+                <a href="help.html"><img id="info" src="../BibliUTZ/img/boton-de-informacion.png" alt="">Ayuda</a>
+                <a href="../BibliUTZ/login.html"><img id="cerrars" src="../BibliUTZ/img/cerrar-sesion.png" alt="">Cerrar sesión</a>
+            </div>
+        </section>
+    </header>
+
+    <section id="main-content">
+        <section id="contenedor">
+            <h1>Perfil del Usuario</h1>
+        <p>Aquí puedes ver y editar tu información personal.</p>
+
+        <!-- Detalles del Usuario -->
+        <section id="user-details">
+            <div class="profile-picture">
+                <img src="../BibliUTZ/img/perfil-bonito.png" alt="Foto de Perfil">
+                <button id="change-picture-btn">Cambiar Foto</button>
+            </div>
+            <div class="user-info">
+                <h2>Nombre del Usuario</h2>
+                <p><strong>Email:</strong> usuario@ejemplo.com</p>
+                <p><strong>Miembro desde:</strong> Enero 2023</p>
+                <div class="button-group">
+                    <button id="edit-profile-btn">Editar Perfil</button>
+                    <button id="change-password-btn">Cambiar Contraseña</button>
+                </div>
+            </div>
+        </section>
+        </section>
+        
+    </section>
+
+    <!-- Modal para editar perfil -->
+    <div id="edit-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Editar Perfil</h2>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" value="Nombre del Usuario">
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" value="usuario@ejemplo.com">
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <footer> 
+        <a href="#"><img id="sp" src="../BibliUTZ/img/ScriptSolutions logo.png" alt="">Desarrollado por Script Solutions</a>
+    </footer>
+
+    <script>
+        // JavaScript para manejar el modal
+        var modal = document.getElementById("edit-profile-modal");
+        var btn = document.getElementById("edit-profile-btn");
+        var span = document.getElementsByClassName("close-btn")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script src="../BibliUTZ/js/carousel-res.js"></script>
+</body>
+</html>

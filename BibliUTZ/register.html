@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../BibliUTZ/css/login.css">
+    <title>Registro - BibliUTZ</title>
+    <link rel="icon" href="../BibliUTZ/img/minilogo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <section id="logo">
+            <a href="admindex.html"><img id="logo-img" src="../BibliUTZ/img/logo animado bibliutz.gif" alt=""></a>
+        </section>
+    </header>
+    <div class="wrapper">
+        <div class="content">
+            <section id="contenedor">
+                <div class="login-form">
+                    <h2>Registro</h2>
+                    <form action="register_process.php" method="post">
+                        <label for="matricula">Matricula:</label>
+                        <input type="text" id="matricula" name="matricula" required>
+                        
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" name="correo" required>
+
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+
+                        <label for="secnom">Segundo Nombre (Opcional):</label>
+                        <input type="text" id="secnom" name="secnom">
+
+                        <label for="apeliidom">Apellido Materno (Opcional):</label>
+                        <input type="text" id="apeliidom" name="apeliidom">
+
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <button type="submit">Registrar</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <footer> 
+            <a href="#"><img id="sp" src="../BibliUTZ/img/ScriptSolutions logo.png" alt="">Desarrollado por Script Solutions</a>
+        </footer>
+    </div>
+</body>
+</html>

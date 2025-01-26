@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Libro</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .text-info {
+            width: 60%;
+        }
+        .cover-image {
+            width: 35%;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer; /* Hace que la imagen parezca un botón */
+        }
+        #portada-input {
+            display: none; /* Ocultar el campo de entrada de archivo */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="libro-form">
+            <div class="text-info">
+                <h2>Información del Libro</h2>
+                <p><strong>Título:</strong> <input type="text" id="titulo" name="titulo" required></p>
+                <p><strong>Autor:</strong> <input type="text" id="autor" name="autor" required></p>
+                <p><strong>Editorial:</strong> <input type="text" id="editorial" name="editorial" required></p>
+                <p><strong>Fecha de Publicación:</strong> <input type="date" id="fecha_publicacion" name="fechapublicacion" required></p>
+                <p><strong>Edición:</strong> <input type="number" id="no_edicion" name="no_edicion" required></p> <!-- Agregado -->
+                <p><strong>ISBN:</strong> <input type="text" id="isbn" name="isbn" required></p>
+                <p><strong>Número de Páginas:</strong> <input type="number" id="num_paginas" name="numpaginas" required></p>
+                <p><strong>Ejemplares:</strong> <input type="number" id="ejemplares" name="no_ejempl" required></p>
+                <p><strong>Clasificación:</strong> <input type="text" id="clasificacion" name="clasificacion" required></p>
+                <p><strong>Catalogación Dewey:</strong> <input type="text" id="catalogacion_dewin" name="catalogaciondewin" required></p>
+                <p><strong>Catalogación Congreso:</strong> <input type="text" id="catalogacion_congreso" name="catalogaciondelcongreso" required></p>
+                <p><strong>Estatus:</strong> <input type="text" id="estatus" name="estatus" required></p>
+                <p><strong>Código de Barra:</strong> <input type="text" id="codigo_barra" name="codigobarras" required></p>
+                <p><strong>Duración del Préstamo (días):</strong> <input type="number" id="duracion_prestamo" name="duracion_prestamo" required></p>
+                <input type="hidden" id="idlibro" name="idlibro"> <!-- Asegúrate de que el ID del libro también se envía -->
+                <p><a href="../BibliUTZ/index.html">Inicio</a></p>
+                <button id="back-button" type="button">Regresar</button>
+                <button id="save-button" type="button">Guardar</button>
+            </div>
+            <div class="cover-image">
+                <h2>Portada</h2>
+                <img id="portada" src="" alt="Portada del libro">
+                <input type="file" id="portada-input" name="portada" accept="image/*">
+            </div>
+        </form>
+        
+    </div>
+    <script src="../BibliUTZ/js/editar.js"></script>
+</body>
+</html>
